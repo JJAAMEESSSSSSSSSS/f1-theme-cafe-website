@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanBites Café - Senna Edition</title>
+    <link rel="stylesheet" href="STYLES_CAFE.css">
+    <link rel="stylesheet" href="PRINT_CAFE.css" media="print">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="lap-counter">LAP 1</span> FLAT OUT CAFE
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">Menu ▾</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Breakfast</a></li>
+                        <li><a href="#">Lunch</a></li>
+                        <li><a href="#">Desserts</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" class="navicon" onclick="toggleMenu()">☰</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>FULL SPEED COFFEE</h2>
+            <p>From the streets of São Paulo to your table bold flavors, crafted with the precision of a Formula 1 pit crew.</p>
+        </section>
+
+        <section class="products">
+            <div class="item">DRS Cafe Latte</div>
+            <div class="item">Pole Position Cappuccino</div>
+            <div class="item">Pit Stop Croissant</div>
+            <div class="item">Chicane Pancakes</div>
+            <div class="item">Fast Lane Muffins</div>
+            <div class="item">Grand Prix Sandwich</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 UrbanBites Café - Senna Tribute | BY: SAN DIEGO
+            <a href="mailto:sgsandiego@student.hau.edu.ph">sgsandiego@student.hau.edu.ph</a>
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

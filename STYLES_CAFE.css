@@ -1,0 +1,142 @@
+body {
+    font-family: 'Arial Black', Arial, sans-serif;
+    margin: 0;
+    background-color: #2a3439; /
+    color: #ffffff; 
+}
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer{
+    text-align: center;
+}
+header, .hero h2, .logo, .item, .lap-counter {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.lap-counter {
+    background: #ff0000;
+    padding: 3px 6px;
+    margin-right: 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.menu li {
+    position: relative;
+    margin-right: 20px;
+}
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+.menu a:hover {
+    color: #ffd700;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #ff0000;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    border: 2px solid #000000;
+}
+.dropdown li a {
+    color: #ffffff;
+}
+.menu li:hover .dropdown {
+    display: block;
+}
+.navicon {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1504754524776-8f4f37790ca0') center/cover no-repeat;
+    color: #ffd700;
+    padding: 60px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.hero p {
+    text-transform: none;
+    font-weight: normal;
+    color: #ffffff;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+.item {
+    background-color: #ff0000;
+    color: #ffffff;
+    flex: 1 1 calc(25% - 20px);
+    padding: 20px;
+    text-align: center;
+    border: 3px solid #000000;
+    border-radius: 6px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.item:hover {
+    background-color: #ffd700;
+    color: #000000;
+    transform: scale(1.05);
+}
+@media (max-width: 480px) {
+    .products .item {
+        flex: 1 1 100%;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #000000;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 200px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .navicon {
+        display: block;
+    }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .products .item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+@media (min-width: 769px) {
+    .products .item {
+        flex: 1 1 calc(25% - 20px);
+    }
+}

@@ -1,0 +1,22 @@
+body {
+    font-family: Times, serif;
+    background: none;
+    color: black;
+}
+
+header, nav, footer {
+    display: none;
+}
+
+.products {
+    display: block;
+}
+
+.item {
+    border-bottom: 1px solid black;
+    padding: 5px 0;
+}
+
+h1, h2 {
+    page-break-after: avoid;
+}
